@@ -92,4 +92,35 @@ Supported commands:
 ## Running the Script
 
 ```bash
-python3 lm_command.py [--conv path/to/file.json] [--folder path/to/conversations] [--poll 2.0]
+python3 lm_command.py [--conv path/to/file.json] [--folder path/to/conversations] [--poll 2.0] 
+```
+---
+
+## ⚠️ Known Issues and Limitations
+
+LMSFileGenir is a powerful AI-driven file automation tool, but it comes with several important limitations and potential risks that users must be aware of:
+
+1. **Security Limitations**
+   - While all operations are sandboxed to the project folder (`C:/project`), any mistake in path handling could theoretically allow operations outside the intended directory.
+   - `/cmd` execution is limited by a whitelist, but improper configuration could still pose a security risk if modified.
+   - Files generated or patched by AI commands could overwrite important files if the user points to sensitive locations inside the sandbox.
+
+2. **AI Misinterpretation**
+   - The AI may misunderstand or misapply commands, especially complex instructions, nested fences, or ambiguous prompts.
+   - The behavior heavily depends on the AI model used, its number of parameters, and its reasoning capabilities.
+   - Some commands may be ignored, executed in the wrong order, or produce unintended results.
+
+3. **Script Imperfections**
+   - The script may occasionally fail due to unhandled edge cases, race conditions in the queue, or JSON parsing errors from LM Studio output.
+   - Backup and atomic write mechanisms are best-effort; data loss is possible if errors occur during file operations.
+   - Logging may not capture all issues, especially subtle content corruption or partial patches.
+
+4. **Limited Testing**
+   - LMSFileGenir has been tested primarily on Windows; cross-platform behavior on Linux or macOS may vary.
+   - Plugins and custom commands can introduce instability if they do not follow expected conventions.
+
+5. **Not a Full AI**
+   - The script itself does not generate AI content; it executes commands produced by LM Studio or similar models.
+   - Users should review AI-generated commands before running in critical directories, as mistakes can propagate to file systems.
+
+**Bottom line:** LMSFileGenir is intended for experimental, educational, or controlled environments. It is not guaranteed to be completely safe, secure, or error-free. Users must exercise caution and maintain backups of important data.
