@@ -1,0 +1,9 @@
+AI used: Qwen3-4b-thinking-2509-genius-coder-ai-full
+Script version: 0.7
+Python version: 3.13.12
+Operating system: cross-platform (tested on Windows)
+Date generated: 2026-02-26
+Note: The script may occasionally bug or behave unexpectedly. 
+           The AI may misunderstand or fail to follow the commands correctly, 
+           depending on its parameters, capabilities, and context. 
+           The system is not perfect.

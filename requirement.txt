@@ -1,0 +1,7 @@
+# requirements.txt for LMSFileGenir
+# Only external dependency required by the script:
+# (watchdog is optional — fallback polling est utilisé si absent)
+watchdog>=2.1
+
+# Python version requirement (not a pip package; for reference)
+# Python >= 3.8

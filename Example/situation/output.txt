@@ -1,0 +1,50 @@
+<thinking>
+Create project structure and minimal examples
+
+Create an empty root folder.
+    Create a requirements.txt file with pip dependencies (note: add a simple dependency like pip freeze).
+    Make a basic Python module.
+    Write a minimal main.py with print statements.
+    Add an example of appending and patching.
+The simplest is to create the root, a folder for code, two files in it, and show how to append/replace. The dependencies are optional but useful for demonstration.
+<thinking>
+
+/create_folder "requirements.txt"
+/create_file "requirements.txt" ```
+pip freeze
+```
+
+/create_folder "src"
+
+/create_file "src/hello.py" ```python
+import sys; print(sys.argv)
+print("hello")
+```
+
+/create_file "main.py" ```python
+import os; print(os.getcwd())
+print("this is the main module")
+```
+
+/append "main.py" ```
+print("appended text")
+
+```
+
+/patch "main.py" ```
+2 + print("new line 1")
+4 - print("hello")
+5 + print("after new line")
+```
+
+/set "main.py" ```python
+import os; print(os.getcwd())
+print("this is the main module again"
+```
+
+/set "src/hello.py" ```python
+import sys; print(sys.argv)
+print("hello from src")
+```
+
+/cmd "pip install pip==24.6"

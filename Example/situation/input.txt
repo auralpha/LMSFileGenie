@@ -1,0 +1,1 @@
+Code un projet d'exemple pour montrer tout ce qu'on peut faire avec les commandes. Réfléchit bien à tout ce qu'il y a à créer, etc.
